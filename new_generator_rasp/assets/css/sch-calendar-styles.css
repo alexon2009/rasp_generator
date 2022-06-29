@@ -1,0 +1,159 @@
+/*КАЛЕНДАРЬ*/
+   .tooltip {
+      word-break: break-all;
+    }
+.tooltip-inner {
+    //white-space: pre-wrap;
+}
+#year-calendar-container{
+    position: fixed;
+    top: 10px;
+}
+#month-calendar{ 
+	border-width: 3px; 
+}
+#month-calendar .add-evening-serv{
+	position: relative;
+    top: -29px;
+    right: -52px;
+}
+
+#month-calendar td div {
+    position: relative;
+    width: 55px;
+    height: 32px;
+    padding: px 8px 8px;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 5px;
+    margin: 1px;
+}
+#month-calendar .header td, .null-cell{
+	border-color: white; 
+}
+#month-calendar td .work-day{
+	background-color:gray; 
+	border-color: gray;
+	color:white;
+}
+#month-calendar td .any-month{
+	background-color:#b1acac; 
+	border-color: #b1acac;
+	color:#e4e0e0;
+}
+#month-calendar td .free-day{
+	background-color:#b93434;
+	border-color: #b93434;
+	color:white;
+}
+#month-calendar td .selected {
+    border-color: #af2424;
+    color: white;
+}
+#month-calendar td b {
+    position: absolute;
+    top: -5px;
+    right: 1px;
+    /* background-color: #ea0808; */
+    color: #fb0202;
+}
+#year-calendar tr .selected{
+	border-color: darkred;
+	color:yellow;
+}
+#year-calendar tr #month-calendar td .selected {
+    border-color: #b93434;
+    color: #eeeeee;
+}
+#month-calendar td  .free-day:hover, #month-calendar td  .work-day:hover{
+	border-color: yellow;
+}
+#month-calendar td .edit-messa {
+	color:#000;
+	display:none;
+    position: relative;
+    top: -130px;
+    left: 30px;
+    width: 700px;
+	height:170px;
+    background-color: white;
+}
+#month-calendar .edit-messa .edit-messa-name {
+    position: relative;
+    width: 100%;
+}
+#year-calendar{
+	background-color:#a5b7af;
+}
+.calendar-month-cell{
+	vertical-align: top;
+    border-style: ridge;
+    padding: 20px;
+    border-color: grey;
+}
+.calendar-date a{
+    color: #FFEB3B;
+}
+#year{
+    left: 20%;
+    position: relative;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+    font-family: sans-serif;
+    background-color: #a5b7af;
+    padding: 10px;
+}
+/* архивная запись */
+.arhive-record{color:#07ece2!important;}
+
+/*БЛОК ВЫДЕЛЕНИЯ УРОКОВ*/
+#calendar-modal {
+	display:none;
+    position: absolute;
+	z-index:100;
+	top:100px;
+    background-color: #af9696;
+    border-style: ridge;
+    width: 0;
+    height: 250px;
+}
+#calendar-lessons-block .selected {
+    border-color: #af2424;
+    color: #eeeeee;
+    background-color: #af2424;
+}
+#calendar-lesson-close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+	cursor:pointer;
+}
+#calendar-lesson-list {
+    list-style: none;
+    position: absolute;
+    right: 35px;
+}
+.calendar-lesson, #lesson-butt {
+    width:20px;
+}
+/*подложна для диалогового окна*/
+#modal-background {
+    /* z-index: 0; */
+    top: -200px;
+    left: -50px;
+    background-color: #413e3e;
+    width: 1000%;
+    height: 1000%;
+    opacity: 0.7;
+}
+#class-list-container table{
+	border-style: none;
+}
+.holyday {
+    background-color: #58b29d;
+    border-color: #58b29d;
+    color: white;
+}

@@ -1,0 +1,925 @@
+html{
+    background-color: #a5b7af;
+}
+#app-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#container h2, #container h3, .printSelection h2, .printSelection h3{
+	text-align: center;
+	margin: 0 0 5px 0;
+}
+@media print {         .printSelected>* {display: none; }         .printSelected>.printSelection { display: block; }        }      .printSelection{display:none;}	/*#title {
+/*#title {
+	width: 500px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+	margin-top: 25px;
+}
+#inner-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+БЛОКИ КОНТЕЙНЕРА*/
+
+.inner-contain {
+    position: absolute;
+    padding-left: 0;
+    padding-right: 0;
+    top: 100px;
+    left: 40px;
+    right: 0px;
+    bottom: 30px;
+}
+#horizont-panel {
+    background-color: #a5b7af;
+    padding-top: 5px;
+}
+#horizont-panel select,
+#horizont-panel div,
+#horizont-panel button,
+#horizont-panel span,
+#horizont-panel a,
+#horizont-panel input
+ {
+    background: #a5b7af;
+	color:white;
+/* 	font-size:large;
+    color: darkred;
+ */}
+#horizont-panel select:hover,
+#horizont-panel button:hover,
+#horizont-panel span:hover,
+#horizont-panel input:hover
+ {
+	color:darkred;
+}
+#horizont-panel table {
+    left: 0;
+    width: 100%;
+ }
+div.logo {
+	position: fixed;
+    top: 0;   
+    left: 0px;
+    width: 56px;
+    height: 56px;
+    text-align: center;
+    z-index: 50;
+}
+.logo-hamburger {
+    width: 56px;
+    height: 56px;
+    font-size: 32px;
+    border-radius: 0px;
+}
+#vertical-panel {
+    position: fixed;
+    top: 56px;
+    padding-left: 0;
+    /* height: 900px; */
+    /* border-style: ridge; */
+    /* border-top-style: none; */
+    background: #a5b7af;
+    /* border-color: grey; */
+}
+#vertical-panel div {
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+#vertical-panel div button:hover {
+    color: #af2424;
+ }
+
+
+.button-panel, .button-panel-disabled {
+    padding: 5px;
+    display: block;
+    border-style: ridge;
+    border-color: #ccd5d1;
+    font-family: sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.button-panel-disabled {
+    cursor: default;
+    border-color: #ccd5d1;
+    color: gray;
+}   
+.button-panel-disabled:hover {
+    cursor: default;
+    border-color: #ccd5d1;
+    color: gray;
+}   
+
+/*    background-color: #a5b7af;
+*/
+#load-rasp, #view-rasp{
+	display:none;
+}
+.subject{
+	position:relative;
+}
+
+/*ВСПЛЫВАЮЩАЯ ПОДСКАЗКА*/
+.lesson-info {
+	display:none;
+	min-width:200px;
+    background: #454545;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+	opacity: 0.8;
+    position: absolute;
+}
+.lesson-button-block{
+	min-width:200px;	
+}
+    .lesson-button:hover + .lesson-info,
+	.lesson-button-3:hover + .lesson-info,
+	.lesson-button-4:hover + .lesson-info,
+	.subject .lesson-block:hover + .lesson-info{
+	display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 1050;
+	}
+.subject .lesson-block{
+	display:block;
+	width:200px;
+	height:25px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
+
+/*РАСПИСАНИЕ*/
+.period-show {
+    font-size: larger;
+    font-weight: bold;
+}
+.lesson-list {
+    border-style: ridge;
+    border-width: 1px;
+} 
+.lesson-list td{
+    font-weight: bold;
+} 
+.lesson-header{
+    height: 55px;
+}
+#rasp-header, #rasp-body {
+    border-spacing: 7px 11px;
+}
+#rasp-body {
+    top: 135px;
+    left: 220px;
+}
+#rasp-header thead {
+	z-index: 10;
+    top: 100px;
+    background-color: #cdd2cc;
+    height: 70px;
+    border-style: ridge;
+    border-width: 1px;
+}
+
+#rasp-header td {
+    width: 220px;
+    margin-left: 20px;
+    padding: 0 5px 5px;
+}
+#rasp{ 
+    margin: 20px 0 20px 0;
+	padding:10px;
+	width: 100%;
+	border-top-style:solid; 
+	border-bottom-style:solid; 
+	border-width: 3px; 	
+	font-weight: bolder;    
+	font-size: 15px;
+}
+#rasp tr{ 
+	height: 30px;
+}
+#rasp tr td{ 
+	padding:10px;
+	border-bottom-style: ridge;
+}
+.header{
+	margin-bottom:30px;
+}
+.rasp-row:hover{ 
+	background-color:#71A269;
+}
+
+#rasp tr .text-field-time{
+	width: 80px;
+    padding: 5px;
+}
+#rasp tr .text-field, #rasp tr .text-field-title {
+    width: 400px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.subject {
+	list-style: none;
+}
+.uch-time{
+    width: 50px;
+    margin-left: 10px;
+    padding: 0 0 0 5px;
+}
+.lessons-block{
+    max-width: 200px;
+    margin-left: 10px;
+}
+.lesson-button, .lesson-button-1, 
+.lesson-button-2, .lesson-button-3, 
+.lesson-button-4, .lesson-button-selected, .lesson-button-insert-selected,
+.lesson-button-group{
+	width: 170px;
+	font-size: 15px;
+	height: 30px;
+	padding: 0 0;
+}	
+.lesson-button-selected, .lesson-button-insert-selected{
+	border-color:darkred;
+    border-style: solid;
+    border-width: 3px;
+}	
+.lesson-button-group{
+	border-color:green;
+    border-style: solid;
+    border-width: 3px;
+}	
+.lesson-button-1, .lesson-button-insert-selected{
+	color:white;
+	background-color: green;
+}	
+.lesson-button-2{
+	color:green;
+	background-color: #b4b3b3;
+}	
+.lesson-button-3, .lesson-button-4{
+	color:white;
+	background-color: #af2424;
+}	
+.av-room:hover, .av-sub-room:hover{
+	background-color: #af2424;
+	cursor:pointer;
+}
+.av-room, .av-sub-room{
+	background-color: #b4b3b3;
+}
+.lesson-aviable-room-list  .selected{
+	border-color:darkred;
+    border-style: solid;
+    border-width: 3px;
+}	
+
+#msg {
+    position: fixed;
+    z-index: 1050;
+    display: none;
+    top: 200px;
+    left: 300px;
+    padding: 30px;
+    border-style: solid;
+}
+
+
+#vertical-panel .selected{
+	color:darkred;
+}	
+.bottom-margin{
+	margin-bottom:20px;
+}
+
+/*БЛОК ПАМЯТИ*/
+
+ 
+#memory-container {
+	display:none;
+    z-index: 1040;
+    position: fixed;
+    /* border-color: gray;
+    border-style: ridge; */
+    padding: 5px;
+    opacity: 0.8;
+    left: 330px;
+    top: 220px;
+    background-color: #72847c;
+}
+#close-memory {
+    color: red;
+}
+#memory-button-block {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/*окно памяти*/
+#tmp-memory-list, #memory-window{
+    float: left;
+    background-color: white;
+    padding: 10px;
+    border-color: brown;
+    border-style: ridge;
+}
+
+#tmp-memory-list{
+    position: relative;
+/*     bottom: -35px;
+    left: 0;
+ */}
+.tmp-memory-class-sbj{
+	cursor:pointer;
+}
+#memory-window{
+    position: relative;
+	width:100%;
+}
+#move-to-memory-list {
+    height: 50px;
+}
+    /* список исполнителей для класса и предмета в окне памяти */
+	
+#exec-list {
+	list-style: none; /*убираем маркеры списка*/
+	margin: 0; /*убираем отступы*/
+	padding-left: 0; /*убираем отступы*/
+	margin-top:-13px; /*делаем отступ сверху*/
+	background:#fff; /*добавляем фон всему меню*/
+}
+#exec-list a {
+    text-decoration: none;
+    background: #9E9E9E;
+    color: #fff;
+    padding: 0px 15px;
+    font-family: arial;
+    line-height: 5px;
+    /* display: block; */
+}
+#exec-list a:hover {
+  background:#FFC107;/*добавляем эффект при наведении*/
+}
+#exec-list .selected {
+    background: #D43737;
+}
+
+#memory-class-list #memory-classes .selected {
+    border-style: solid;
+	color: #D43737;
+}
+
+
+
+/*МЕНЮ*/
+#main-menu {
+}
+/*список- меню*/
+.display-none{
+	display:none;
+}
+#memory-class-list li > .display-none, #main-menu li > .display-none{
+	    border: none;
+}
+#memory-class-list ul, #main-menu ul {
+/* 	top: 65px;
+ */    position: relative;
+    border-style: ridge;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+/*     margin-top: 25px;
+ */    background: #a5b7af;
+}
+#memory-class-list ul a, #main-menu ul a  {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  background:#a5b7af; /*добавляем фон к пункту меню*/
+  color:#fff; /*меняем цвет ссылок*/
+  padding:0px 15px; /*добавляем отступ*/
+  font-family: arial; /*меняем шрифт*/
+  line-height:50px; /*ровняем меню по вертикали*/
+  display: block; 
+  border-right: 1px solid #677B27; /*добавляем бордюр справа*/
+  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+#memory-class-list ul a:hover, #main-menu ul a:hover{
+  background:#D43737;/*добавляем эффект при наведении*/
+}
+#memory-class-list ul li, #main-menu ul li {
+  float:left; /*Размещаем список горизонтально для реализации меню*/
+  position:relative; /*задаем позицию для позиционирования*/
+  cursor:pointer;
+}
+     
+	/*Стили для скрытого выпадающего меню*/
+	#memory-class-list li > ul, #main-menu li > ul{
+		position:absolute;
+		z-index: 11;
+/* 		top:25px;
+ */		display:none;   
+		color:#fff; /*меняем цвет ссылок*/
+		font-family: arial; /*меняем шрифт*/
+	}
+	#main-menu li > ul{
+		margin-left: 50px;
+	}
+
+	/*Делаем скрытую часть видимой*/
+	#memory-class-list li:hover > ul, #main-menu li:hover > ul {
+		display:block; 
+		width:250px;  /*Задаем ширину выпадающего меню*/      
+	}
+	#memory-class-list li:hover > ul > li, #main-menu li:hover > ul > li {
+		padding:0px 15px; /*добавляем отступ*/
+		float:none; /*Убираем горизонтальное позиционирование*/
+	}  
+	#memory-class-list li > ul > li:hover, #main-menu li > ul > li:hover{
+		background:#D43737;/*добавляем эффект при наведении*/
+	}
+
+/*УЧЕБНЫЙ ПЛАН*/
+#uch-plan{
+    border-collapse: collapse; /* Убираем двойные границы между ячейками */
+    background: #a5b7af; /* Цвет фона таблицы */
+    /*border: 4px solid #000;  Рамка вокруг таблицы */
+}
+#uch-plan .uch-plan-cell {
+    padding: 5px; /* Поля вокруг текста */
+    border: 2px solid green; /* Рамка вокруг ячеек */
+	vertical-align: top;
+}
+.uch-plan-cell td, .uch-plan-cell th{
+    border-bottom: 2px solid #000; /* Рамка вокруг ячеек */
+	border-collapse: collapse; /* Убираем двойные границы между ячейками */
+
+}
+.uch-plan-table tr{
+    border: 2px solid #000; /* Рамка вокруг ячеек */
+	/*border-collapse: collapse;  Убираем двойные границы между ячейками */
+
+}
+.warning{
+    color: red;
+    cursor: pointer;
+}
+.edit-subject, .active{
+    cursor: pointer;	
+}
+/*СПИСКИ*/
+/**/
+#list-container {
+/*     margin-top: 40px;
+ */    min-height: 475px;
+}
+#list-container table{
+
+	}
+#list-container td{
+    vertical-align: middle;
+    padding-left: 10px;
+	padding-right: 5px;
+}
+#list-container #list-box, #list-container #edit-box {
+    border-color: grey;
+    padding: 2px;
+}
+#list-container #list-box #list, #list-container #edit-box #edit{
+    border-style: solid;
+    border-width: thin;
+ }
+
+#list-container #edit-box{
+}
+
+#list-container #edit-box #uch-plan-table{
+    border-style: ridge;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+#list-container #edit-box #uch-plan-table td{
+	border-style: ridge;
+    border-color: gray;}
+#list-container #edit-box #uch-plan-table td table td{
+        border-style: none;
+}
+#class-subject-links{
+    border-style: ridge;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+#class-subject-links td, #class-subject-links th{
+	border-style: ridge;
+    font-size: large;
+    font-weight: bolder;
+    border-color: grey;
+	padding-right: 5px;
+}
+.links{
+	height:35px;
+	border-color:#a5b7af;
+	border-style: solid;
+	padding-left: 5px;
+}
+#class-list-container tr:hover{
+	background:green;
+}
+ul{
+    list-style: none;
+}
+#list-container .edit:hover {
+    background: #b4b3b3;
+}
+#list-container .room-exec, 
+#list-container .class-num-room, 
+#list-container .room-class-num, 
+#list-container .sbj-class-num{
+	padding-left:5px;
+	margin-bottom:2px;
+    cursor: pointer;
+    background: #d4d0d091;
+}
+/*#list-container .room-exec:hover, 
+#list-container .class-num-sbj:hover, 
+#list-container .class-num-room:hover, 
+#list-container .room-class-num:hover, 
+#list-container .sbj-class-num:hover{
+	background:#b4b3b3;
+} 
+.sch-link,
+*/
+#list-container .class-sbj-link,#list-container .class-num-class-link, 
+#list-container .exec-room-link, 
+#list-container .class-num-room-link {
+    background: gray;
+    color: #fff;
+}
+
+#class-subject-links .class-sbj-link,
+#class-subject-links .selected,
+#class-subject-links .cell {
+ 	border-style:solid;
+	border-width:2px;
+    width: 42px;
+    height: 42px;
+}
+.sch-link{
+    background: gray;
+    color: #fff;
+    cursor: pointer;
+}
+.sch-link:hover{
+	background:#b4b3b3;
+}
+
+#class-subject-links .class-sbj-link {
+    background: gray;
+    border-color: gray;
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#class-subject-links .selected{
+    background: gray;
+	border-color:gray;
+	color:green;
+}
+#class-subject-links .cell {
+    background: #d4d0d091;
+	border-color:#d4d0d091;
+	border-color:#d4d0d091;
+}
+#class-subject-links .class-sbj-link:hover,
+#class-subject-links .selected:hover {
+	border-color:#b4b3b3;
+	cursor:pointer;
+}
+.edit, .class-view{
+	padding-left:5px;
+	margin-bottom:2px;
+    background: #d4d0d091;
+}
+.settings-container table {
+    width: 100%;
+    border-style: ridge;
+    padding: 5px;
+	margin-bottom: 10px;
+}
+.settings-container table ul{
+    width: 400px;
+    list-style: none;
+}
+#rasp-select-shift, #rasp-select-period{
+    font-size: larger;
+    font-weight: bold;
+    background-color: #a5b7af;
+}
+input, .settings-container, #list-container{
+    font-size: large;
+	background-color: #fff;
+
+}
+#week-length{
+	width:30px;
+}
+.manage-button-container {
+    position: relative;
+    /* bottom: 20px; */
+    margin: 5px;
+    /* margin-bottom: 20px; */
+    /* margin-right: 20px; */
+    float: right;
+    /* height: 20px; */
+}
+#edit-lessons-limit{
+	width: 30px;
+}
+/*ШАБЛОНЫ*/
+#edit-temlate-form{
+    position: absolute;
+    left: 230px;
+    top: 150px;
+}
+/*МОБИЛЬНАЯ ВЕРСИЯ ДЛЯ ПРОСМОТРА*/
+#header-container{
+	width: 100%;
+    margin-bottom: 40px;
+    background-color: #a5b7af;
+	padding: 10px;
+}
+#header-container #horizont-panel-us{
+    font-size: 50px;
+    font-weight: bold;
+}
+#header-container #app-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+#header-container #app-title:hover{
+    font-size: 50px;
+    font-weight: bold;
+}
+#header-container #horizont-panel-us div{
+    position: relative;
+}
+#view-container {
+    position: relative;
+    background-color: #a5b7af;
+    width: 100%;
+    padding: 10px;
+    height: 1000px;
+}
+#rasp-week {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+#rasp-week .back{
+    border-color: aqua;
+}
+#rasp-week .week, #rasp-week .week-day, #rasp-week .week-day-lesson, #rasp-week .back{
+	height:60px;
+    margin: 20px;
+    padding: 10px;
+    border-style: ridge;
+}
+.nav-enable, .nav-disable{
+	font-size:80px;
+	margin: 5px 35px 5px 35px;
+}
+.nav-enable{
+	color:fff;
+}
+.nav-disable{
+	color:grey;
+}
+.hor-split{
+    background-color: #fff;
+}
+.selected {
+    color: #FFC107 !important;
+    background-color: grey !important;
+    border-color: #FFC107 !important;
+    border-style: solid;
+}
+.uch-cnt{
+    width: 30px;
+}
+/**/
+.top-sub-navbar {
+    background-color: #FFF;
+    top: 56px;
+    left: 56px;
+    right: 0px;
+    z-index: 100;
+    min-height: 42px;
+    position: fixed;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.35);
+}
+.panel-heading.panel-title-ok.top-sub-navbar {
+    padding: 4px;
+    padding-left: 10px;
+    border: 0px none;
+}
+.panel-buttons {
+    text-align: right;
+    float: right;
+}
+.bs-panel-title-row {
+    display: table-row;
+}
+.bs-panel-title-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.navbar-fixed-top.marm-title {
+    /* left: 56px; */
+    padding-left: 56px;
+    height: 56px;
+    border: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.35);
+}
+.dark-primary-color {
+    /* background: #388E3C; */
+	background-color: #a5b7af;
+    color: #FFFFFF;
+}
+
+.marm-menu {
+    position: fixed;
+    left: 0px;
+    top: 56px;
+    vertical-align: middle;
+    width: 40px;
+    height: 100%;
+    background-color: #4CAF50;
+    z-index: 1010;
+}
+
+.smart-marm-menu:hover {
+/*    min-width: 200px;
+ */ }
+
+.smart-marm-menu:hover .marm-flat-button {
+    display: block;
+    width: 100%;
+}
+.btn.marm-flat-button.active, .btn.marm-flat-button:focus {
+/*     background-color: #388E3C;
+ */
+	box-shadow: none;
+    border-radius: 0px;
+}
+.btn.marm-flat-button {
+    background-color: transparent;
+    border: 0px none;
+    color: #FFF;
+    width: 56px;
+    height: 46px;
+}
+.bs_button_link.btn-sm.glyphicon {
+	padding:0px;
+}
+
+.smart-marm-menu:hover .marm-flat-button > .panel-btn-title {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 8px;
+    white-space: normal;
+    line-height: 1.2;
+}
+.smart-marm-menu:hover .marm-flat-button > .glyphicon {
+    display: table-cell;
+    top: -1px;
+    padding-left: 2px;
+}
+.p-btn > .glyphicon.glyphicon-x2 {
+    font-size: 2em;
+}
+.p-btn > .glyphicon.glyphicon-x4 {
+    font-size: 4em;
+}
+.glyphicon.gray {
+    color: gray;
+}
+.glyphicon.green {
+    color: green;
+}
+.glyphicon.white {
+    color: white;
+}
+.glyphicon.silver {
+    color: #d4d0d091;
+}
+span.glyphicon.glyphicon-x2 {
+    font-size: 2em;
+}
+span.glyphicon.glyphicon-x4 {
+    font-size: 4em;
+}
+.smart-marm-menu .marm-flat-button > .panel-btn-title {
+    display: none;
+}
+.panel-btn-title {
+    display: block;
+    font-size: 12px;
+}
+#min-menu{
+	display:block;
+}
+#max-menu{
+	display:none;
+}
+
+
+.tree-lazy {
+    width: inherit;
+}
+.tree-lazy-indent {
+    text-align: right;
+    padding-right: 10px;
+}
+/*элементы первой колонки выводим как ячеки таблицы*/
+.tree-lazy-first-cell {
+    display: table-cell;
+}
+/*вложенные элементы могут иметь отступы,
+которые нужно подавить,
+это актуально при переносе строки*/
+.tree-lazy-first-cell > * {
+    padding-left: 0px;
+}
+.table.tree-lazy > tbody > tr > td,
+.table.tree-lazy > thead > tr > th {
+    padding: 1px;
+    padding-left: 8px;
+    vertical-align: middle;
+}
+.table.tree-lazy > thead > tr > th {
+    font-weight: bold;
+    color: #555;
+}
+/*MODAL DIALOG*/
+.mod-dialog {
+    position: fixed;
+    top: 100px;
+    left: 20%;
+    z-index: 1;
+    padding: 15px;
+    border-style: groove;
+    background-color: white;
+    display: none;
+}
+/*	SEARCH_BOX*/
+/* .add-on .input-group-btn > .btn {
+  border-left-width:0;left:-2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.add-on .form-control:focus {
+ box-shadow:none;
+ -webkit-box-shadow:none; 
+ border-color:#cccccc; 
+}
+.form-control{width:20%}
+.navbar-nav > li > a {
+  border-right: 1px solid #ddd;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.navbar-nav:last-child{ border-right:0}
+ */
+div.inline {
+display: inline-block;
+vertical-align: top;
+}
+.btn-yellow {
+    color:#4cae4c;
+    background-color: #ffeb3b5c;
+    border-color: #ffeb3b5c;
+}
+.btn-blue {
+    color: #ffffff;
+    background-color: #67b3d5;
+    border-color: #03A9F4;
+}
